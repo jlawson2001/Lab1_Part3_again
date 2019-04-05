@@ -1,0 +1,140 @@
+<style>
+  a{
+    color: ##ffb5ec;
+    background-color: #98edf2;
+  }
+</style>
+
+color: blue;
+font-weight: bold;
+
+can color specific things!
+
+<style>
+  ancestor child{
+    property: value;
+  }
+  </style>
+
+<style>
+  ul li{
+    color: blue;
+  }
+
+  a:hover{
+    color: pink;
+    }  /* means style a tag but only when u hover over it, sector: pseudoclass{*/
+  </style>
+
+
+  <p>Same as color name "Tomato":</p>
+
+  <h1 style="background-color:rgb(255, 99, 71, 50%);">rgb(255, 99, 71)</h1>
+  <h1 style="background-color:#ff6347;">#ff6347</h1>
+  <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+  <p>Same as color name "Tomato", but 50% transparent:</p>
+  <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+  <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+
+  <p>In addition to the predefined color names, colors can be specified using RGB, HEX, HSL, or even transparent colors using RGBA or HSLA color values.</p>
+/* comment */
+tag/selector {
+  property1: value1;
+  property2: value2;
+}
+
+
+
+ids --> # <!-- can only use ID once-->
+
+<!--give the link an id in your html code, then-->
+#homelink{
+  color: red;
+}
+
+you can also group selectors!
+
+h1, h2{     <!--commas mean "both," spaces mean ancestor/descendant"-->
+  color: red;
+}
+
+classes --> . <!--can have multiple elements in same class, in html class="" attribute-->
+
+.bluetext{
+  color: blue;
+}
+
+padding
+
+margins:
+
+header{
+  img: url:""
+
+}
+
+main{
+  width: 90% <!-- width of content-->
+  margin: 0 auto;
+}
+
+
+box model:
+
+width:
+padding:
+border:
+margin:
+
+
+
+<style>
+div {
+  background-color: lightblue;
+  width: 200px;
+  padding: 25px;
+  border: 25px solid navy;  <!-- border color just add in-->
+}
+</style>
+
+
+<span class="a"> span by default is IN-LINE
+
+<div> in a block, generic element will take up chunk of page
+
+display: u can have
+
+inline- takes up as little space as possible ignores width and height
+ <span> <a>
+  span.b{
+    display:inline-block;
+  }
+inline-block- will take up a small area around it, can add width and height
+<img>
+block- by default, will take up entire width, BUT you can adjust height and width
+<h1> <div>
+
+COMBINATORS
+
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+
+child selector (>)
+<div>
+<p>Paragraph 1 in the div.</p>
+<p>Paragraph 2 in the div.</p>
+<span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+</div>
+
+adjacent sibling selector (+)
+Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+
+The following example selects all <p> elements that are placed immediately after <div> elements:
+  div + p {
+  background-color: yellow;
+}
+general sibling selector (~)
